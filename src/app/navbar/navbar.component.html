@@ -1,0 +1,19 @@
+<header class="header">
+    <nav>
+      <div class="logo-box">
+        <a [routerLink]="['/home']" >
+          <img src="./assets/images/logo-black.png" alt=""  />
+        </a>
+      </div>
+     
+      <ul>
+        <li><a [routerLink]="['/home']" routerLinkActive="active"  >Home</a></li>
+        <li><a [routerLink]="['/table']" routerLinkActive="active" >Time Table</a></li>
+        <li><a [routerLink]="['/seating']" routerLinkActive="active" >Seatings Table</a></li>
+        <li><a  class="btn primary-btn" style="margin-left: 15px !important;">Subscribe</a></li>
+      </ul>
+       <div class="toggler">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+    </nav>
+  </header>
