@@ -1,0 +1,87 @@
+td{
+    outline: 1px solid rgb(202, 147, 28);
+    text-align: center;
+    padding: 10px 10px;
+}
+tr th{
+    padding: 15px 15px;
+}
+
+ table {
+    width: 90%;
+}
+ table th.num {
+    min-width: 100px;
+    text-align: center;
+}
+ table th.file {
+    min-width: 100px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.options{
+    display: flex;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.section .title span i {
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.parent-con {
+    width: 100%;
+    height: max-content;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.data-table {
+    width: 100%;
+    height: fit-content;
+}
+
+.data-table .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.data-table .top h1 {
+    font-weight: 400;
+}
+
+.data-table .top>.span {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.data-table .top>.span select {
+    border: 1px solid #A6C1D3;
+    padding: 0 .3rem;
+    margin-right: 1rem;
+    background-color: #fff;
+    font-size: 16px;
+}

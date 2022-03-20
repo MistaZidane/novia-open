@@ -1,0 +1,287 @@
+.name{
+    text-align: center;
+}
+th{
+    font-weight: bold;
+    color: black !important;
+}
+td{
+    color: gray !important;
+}
+th, td, table{
+    border: solid 1px var(--border-color); 
+    border-collapse: collapse; 
+}
+td{
+    outline: 1px solid rgb(202, 147, 28) !important;
+    text-align: center;
+    padding: 10px 10px;
+}
+tr th{
+    padding: 15px 15px;
+    text-align: center !important;
+  
+}
+th{
+    outline: 1px solid rgb(202, 147, 28) !important;
+}
+ table {
+    width: 100%;
+    
+    
+}
+ table th.num {
+    min-width: 100px;
+    text-align: center;
+}
+ table th.file {
+    min-width: 100px;
+    text-align: center;
+}
+.options{
+    display: flex;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.section .title span i {
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.parent-con {
+    width: 100%;
+    height: max-content;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.data-table {
+    width: 100%;
+    height: fit-content;
+}
+
+.data-table .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.data-table .top h1 {
+    font-weight: 400;
+}
+
+.data-table .top>.span {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.data-table .top>.span select {
+    border: 1px solid #A6C1D3;
+    padding: 0 .3rem;
+    margin-right: 1rem;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.table-con {
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.table-con table {
+    width: 100%;
+    height: fit-content;
+}
+
+.table-con table thead tr {
+    border-bottom: 2px solid #eee;
+}
+
+.table-con table th {
+    font-size: 16px;
+    color: var(--text-light);
+    font-weight: 500;
+    height: 45px;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 3px solid #eee;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.table-con table td {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    color: var(--text);
+}
+
+.table-con table td.flex-center {
+    text-align: center;
+}
+
+.table-con table td img {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.table-con table td.file img {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.table-con table .yes-pill {
+    width: 70px;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+    background-color: #BEFFDA;
+    color: var(--green);
+    border-radius: 50px;
+}
+
+.table-con table .num {
+    justify-content: center;
+    text-align: center;
+    width: 50px;
+}
+
+.table-con table .date {
+    display: grid;
+    align-content: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.table-con table .date .time {
+    color: #7D9EB5;
+    margin-top: .3rem;
+    font-size: 14px;
+}
+
+.table-con table .action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.table-con table .action a.edit {
+    font-size: 14px;
+    border-radius: 5px;
+    padding: .5rem;
+    margin-right: .5rem;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.table-con table .action a.edit:hover {
+    background-color: var(--primary-dark);
+}
+
+.table-con table .action a.delete {
+    font-size: 14px;
+    border-radius: 5px;
+    padding: .5rem;
+    margin-right: .5rem;
+    color: #fff;
+    background-color: #e63939;
+}
+
+.table-con table .action a.delete:hover {
+    background-color: rgb(202, 1, 1);
+}
+
+.table-con table .action a.see {
+    font-size: 14px;
+    border-radius: 5px;
+    padding: .5rem;
+    margin-right: .5rem;
+    color: #fff;
+    background-color: var(--blue);
+}
+
+.table-con table .action a.see:hover {
+    background-color: #045a88;
+}
+
+.table-con table .action a.cancel {
+    font-size: 14px;
+    border-radius: 5px;
+    padding: .5rem;
+    margin-right: .5rem;
+    color: #fff;
+    background-color: var(--dark-bg);
+}
+
+.table-con table .action a.cancel:hover {
+    background-color: #1B1B1B;
+}
+
+.table-con table .action a.download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border: 2px solid var(--blue);
+    padding: .3rem;
+    color: var(--blue);
+    border-radius: 50%;
+}
+
+.table-con table .action a.download:hover {
+    background-color: var(--blue);
+}
+
+.table-con table .action a.download:hover i {
+    color: #fff;
+}
+
+.table-con table td .rate i {
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+.table-con table td .pill {
+    padding: .3rem 1rem;
+    color: #fff;
+    border-radius: 50px;
+    margin: 0 auto;
+    width: fit-content;
+    align-self: center;
+}
+
+.table-con table td .published {
+    background-color: var(--primary-color);
+}
+
+.table-con table td .unpublished {
+    background-color: var(--dark-bg);
+}
+
+.table-con table td .sent {
+    background-color: var(--green);
+}
+
+.table-con table td .not-sent {
+    background-color: #f2c94c;
+}

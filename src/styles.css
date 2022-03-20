@@ -1082,7 +1082,7 @@ footer {
 }
 
 .footer-links {
-  width: 60%;
+  width: 30%;
   margin: 2rem auto;
   display: flex;
   justify-content: space-between;
@@ -1281,40 +1281,20 @@ footer .social-media-links-container .social-media-links {
 }
 
 /* Compare Plans Table */
-.compare-plans-table {
+/* .compare-plans-table {
   background-color: var(--color-white);
   margin: 5rem 0;
   width: 100%;
   border: 1px solid #dce4f3;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
-}
-.compare-plans-table thead tr td {
-  font-size: 21px;
-}
-.compare-plans-table tr {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 2rem 0;
-}
+  /* overflow-x: scroll; */
 
-.compare-plans-table tr:not(:last-of-type) {
-  border-bottom: 1px solid #dce4f3;
-}
 
-.compare-plans-table thead tr {
-  border-bottom: 1px solid #dce4f3;
-}
 
-.compare-plans-table tbody tr .heading {
-  color: var(--color-violet);
-  font-weight: 600;
-  font-size: 20px;
-}
 
-.compare-plans-table tr td:first-of-type {
-  padding-left: 1rem;
-}
+
+
 /* ================== End Of Compare Plans Section =============== */
 /* ================== Start of FAQs Section ====================== */
 .frequently-asked-questions-section {
@@ -1860,3 +1840,5 @@ footer .social-media-links-container .social-media-links {
   border-radius: 4px;
 }
 /* ===================+++ End of Blog Details Page styles ++++================= */
+
+
