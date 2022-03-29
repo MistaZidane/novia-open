@@ -93,58 +93,66 @@ console.log(this.dataToDisplay.firstPeriod[0],"okahsxs");
   
   }
   
-    getData(){
-      this.dataService.getTimeTable(this.selectedSemester,this.selectedDepartment).subscribe((obDa:any)=>{
-        if(obDa.success){
-          this.tableData = obDa.docs[0];
-         
-          let data = obDa.docs[0].table[0];
-          // data organizer
-        let daysInweek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  
-          let templateData:any = {
-            firstPeriod:[],
-            secPeriod:[],
-            thirdPeriod:[],
-            fourthPeriod:[]
-          };
-          daysInweek.forEach((day:string, index:any)=>{
-            templateData.firstPeriod.push( {day:day, dayIndex:index+1,course:"", lecturer:''});
-            templateData.secPeriod.push( {day:day, dayIndex:index+1,course:"", lecturer:''});
-            templateData.thirdPeriod.push( {day:day, dayIndex:index+1,course:"", lecturer:''});
-            templateData.fourthPeriod.push( {day:day, dayIndex:index+1,course:"", lecturer:''});
-          });
-         console.log(templateData,"temp");
-         
+  getData(){
+    this.dataService.getTimeTable(this.selectedSemester,this.selectedDepartment).subscribe((obDa:any)=>{
+      if(obDa.success && obDa.docs[0]){
+        this.tableData = obDa.docs[0];
        
-        data.firstPeriod.forEach((element:any) => {
-      
-          templateData.firstPeriod[element.dayIndex -1] = element;
+        let data = obDa.docs[0].table[0];
+        // data organizer
+      let daysInweek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        let templateData:any = {
+          firstPeriod:[],
+          secPeriod:[],
+          thirdPeriod:[],
+          fourthPeriod:[]
+        };
+        daysInweek.forEach((day:string, index:any)=>{
+          templateData.firstPeriod.push( {day:day, dayIndex:index+1,course:"", lecturer:''});
+          templateData.secPeriod.push( {day:day, dayIndex:index+1,course:"", lecturer:''});
+          templateData.thirdPeriod.push( {day:day, dayIndex:index+1,course:"", lecturer:''});
+          templateData.fourthPeriod.push( {day:day, dayIndex:index+1,course:"", lecturer:''});
         });
-        data.secPeriod.forEach((element:any) => {
+       console.log(templateData,"temp");
        
-          templateData.secPeriod[element.dayIndex -1] = element;
-          
-        });
-        data.thirdPeriod.forEach((element:any) => {
      
-          templateData.thirdPeriod[element.dayIndex -1] = element;
-          
-        });
-        data.fourthPeriod.forEach((element:any) => {
-         
-          templateData.fourthPeriod[element.dayIndex -1] = element;
-          
-        });
+      data.firstPeriod.forEach((element:any) => {
+    
+        templateData.firstPeriod[element.dayIndex -1] = element;
+      });
+      data.secPeriod.forEach((element:any) => {
      
-            console.log(data);
-            this.dataLoaded = true;
-            this.dataToDisplay = templateData;
-          
+        templateData.secPeriod[element.dayIndex -1] = element;
+        
+      });
+      data.thirdPeriod.forEach((element:any) => {
+   
+        templateData.thirdPeriod[element.dayIndex -1] = element;
+        
+      });
+      data.fourthPeriod.forEach((element:any) => {
+       
+        templateData.fourthPeriod[element.dayIndex -1] = element;
+        
+      });
+   
+          console.log(obDa.docs[0],"***************************** here");
+          if(obDa.docs[0].table.length > 0){
+              this.dataLoaded = true;
+          }
+        else{
+          this.dataLoaded = false;
         }
-      })
-    }
-  
+          this.dataToDisplay = templateData;
+
+        
+      }
+      else{
+        this.dataLoaded = false
+      }
+    })
+  }
     selectSemester(event:any){
       this.selectedSemester = event.target.value;
       this.tableData = [];

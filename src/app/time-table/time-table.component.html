@@ -38,6 +38,7 @@
 
                                 </div>
                                 </div>
+                                <p *ngIf="!dataLoaded">No Time Table Generated for selected semester and Department</p>
                                 <div class="table-con" id="pdfTable" #pdfTable >   
                                     <table *ngIf="dataLoaded" >
 
